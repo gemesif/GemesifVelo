@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">gemesifVelo</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_settings_1">Settings 1</string>
+
+    <string name="datestring">2014 07 08 14:49 50</string>
+    <string name="Sep">Speed</string>
+    <string name="Sep1">Controll</string>
+    <string name="SpeedText">36</string>
+    <string name="SpeedText1">3</string>
+    <string name="SpeedDim">Sp\n(km/h)</string>
+
+    <string name="SpeedMessage">This is Speed fragment</string>
+    <string name="Test">Test Text</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+</resources>

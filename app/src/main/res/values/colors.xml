@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white1">#FFFFFF</color>
+    <color name="white2">#DDDDDD</color>
+    <color name="yellow1">#F9E60E</color>
+    <color name="yellow2">#F9F89D</color>
+    <color name="orange4">#F7BE45</color>
+    <color name="orange5">#F7D896</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="red">#FF0000</color>
+    <color name="olive">#808000</color>
+    <color name="purple">#800080</color>
+    <color name="maroon">#800000</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="lime">#00FF00</color>
+    <color name="teal">#008080</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue2">#19FCDA</color>
+    <color name="blue25">#D9F7F2</color>
+    <color name="navy">#000080</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="gray">#808080</color>
+    <color name="grey05">#ACA899</color>
+    <color name="DimGrey">#696969</color>
+    <color name="black">#000000</color>
+
+    <color name="baseBackground">#FFFFFF</color>
+    <!-- <color name="baseBackground">#000000</color> -->
+    <color name="baseForeground">#000000</color>
+    <!-- <color name="baseForeground">#FFFFFF</color> -->
+    <color name="baseFont">#000000</color>
+
+    <color name="baseSpeedScreenFont">@color/black</color>
+    <color name="baseSpeedbackground">@color/yellow1</color>
+    <color name="baseSpeedLayoutbackground">@color/grey05</color>
+
+    <color name="fontColor">@color/black</color>
+    <color name="inverse_fontColor">@color/white</color>
+
+    <color name="sepfontcolor">@color/black</color>
+    <color name="inverse_sepfontcolor">@color/white</color>
+
+    <color name="fontColor_darkbackground">@color/white</color>
+    <color name="inverse_fontColor_darkbackground">@color/black</color>
+    <color name="background">@color/white</color>
+    <color name="inverse_background">@color/black</color>
+
+    <color name="sepblackbackground">@color/black</color>
+    <color name="inverse_sepblackbackground">@color/white</color>
+
+    <color name="darkbackground">@color/black</color>
+    <color name="inverse_darkbackground">@color/white</color>
+
+
+    <color name="buttonbackground">@color/white</color>
+    <color name="inverse_buttonbackground">@color/black</color>
+    <color name="push_buttonbackground">@color/grey05</color>
+    <color name="inverse_push_buttonbackground">@color/grey05</color>
+    <color name="buttonfontcolor">@color/black</color>
+    <color name="inverse_buttonfontcolor">@color/white</color>
+    <color name="push_buttonfontcolor">@color/white</color>
+    <color name="inverse_push_buttonfontcolor">@color/black</color>
+
+
+
+
+
+</resources>

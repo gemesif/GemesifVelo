@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DateTimeFont">
+        <item name="android:textSize">15sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:textColor">@color/baseSpeedScreenFont</item>
+    </style>
+
+    <style name="SepFont">
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textStyle">normal|italic</item>
+        <item name="android:textColor">@color/baseSpeedScreenFont</item>
+    </style>
+
+    <style name="SpeedFont">
+        <item name="android:textSize">80sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:textColor">@color/baseSpeedScreenFont</item>
+    </style>
+
+    <style name="Speed1Font">
+        <item name="android:textSize">40sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:textColor">@color/baseSpeedScreenFont</item>
+    </style>
+
+    <style name="SpeedDimFont">
+        <item name="android:textSize">10sp</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textStyle">normal|italic</item>
+        <item name="android:textColor">@color/baseSpeedScreenFont</item>
+    </style>
+
+</resources>

@@ -1,0 +1,6 @@
+android:layout_marginTop="0dp"
+android:baselineAligned="false"
+android:includeFontPadding="false"
+
+android:minHeight="0dp"
+android:minWidth="0dp"
