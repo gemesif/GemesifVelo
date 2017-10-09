@@ -11,7 +11,7 @@
     <string name="SpeedDim">Sp\n(km/h)</string>
 
     <string name="SpeedMessage">This is Speed fragment</string>
-    <string name="Test">Test Text</string>
+    <string name="Test">Test Text Field</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>

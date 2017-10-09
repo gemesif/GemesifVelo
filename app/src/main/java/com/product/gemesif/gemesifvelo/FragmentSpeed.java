@@ -13,10 +13,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MotionEventCompat;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -120,6 +122,12 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
         Button_v2h1_1 = (Button) rootView.findViewById(R.id.Button_v2h1_1);
         Button_v2h1_1.setOnClickListener(this);
         Button_v2h1_1.setOnLongClickListener(this);
+
+        rootView.findViewById(R.id.Button_v2h1_1);
+
+        adjustTextSize(Button_v2h1_1);
+        adjustTextSize((TextView) rootView.findViewById(R.id.Text_v2h2v1_1));
+
         return rootView;
     }
 
@@ -240,7 +248,8 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
             } else {
 
                 if (child instanceof Button) {
-                    Log.d(DEBUG_TAG, "Button");
+
+                    // Log.d(DEBUG_TAG, "Button");
 
                     /*
 
@@ -258,16 +267,17 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
 
                     adjustButton((Button) child, daynight, AppearanceColorButton());
 
+                    // adjustTextSize((TextView) child, IdAsString);
+
                 } else if (child instanceof TextView) {
 
-
                     if (findCatching(GemesifVeloGlobal.patternNOTAG, IdAsString)) {
-
 
                         // Log.d(DEBUG_TAG, "TextView");
                         // Log.d(DEBUG_TAG, "ID as String : " + IdAsString);
 
                         adjustTextView((TextView) child, daynight, GemesifVeloGlobal.AppearanceColorTextView(AppearanceType.NORMAL));
+
 
                     } else if (findCatching(GemesifVeloGlobal.patternSEP, IdAsString)) {
 
@@ -413,19 +423,66 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
             ColorStateList colorStates = new ColorStateList(new int[][]{new int[]{android.R.attr.state_pressed}, new int[]{}}, new int[]{
                     getColorDayNight_Data(colorDayNightInverse.get(themeColors[3])), getColorDayNight_Data(colorDayNightInverse.get(themeColors[2]))});
             button.setTextColor(colorStates);
-            }
         }
+    }
 
-        public class MyOnTouchListener implements View.OnTouchListener {
+    void adjustTextSize(final TextView textView) {
+
+        // Log.d(DEBUG_TAG, "adjustTextSize");
+
+        textView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
 
             @Override
-            public boolean onTouch(View view, MotionEvent event) {
+            public void onGlobalLayout() {
 
-                int action = MotionEventCompat.getActionMasked(event);
+                String stringButton = ".*Button_v2h1_1.*";
+                String IdAsString = textView.getResources().getResourceName(textView.getId());
 
-                // Log.d(DEBUG_TAG, "FragmentSpeed onTouch");
+                // Log.d(DEBUG_TAG, "addOnGlobalLayoutListener " + stringButton + " " + IdAsString);
 
-                return true;
+                int sp30 = 30;
+                float px30;
+                float calculateSP;
+                float pixel_to_sp;
+
+                //now we can retrieve the width and height
+                int width = textView.getWidth();
+                int height = textView.getHeight();
+
+                // Log.d(DEBUG_TAG, "addOnGlobalLayoutListener ");
+
+                // textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp30);
+
+                px30 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp30, getResources().getDisplayMetrics());
+
+                pixel_to_sp = (float) sp30 / px30;
+                calculateSP = height * pixel_to_sp;
+
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, calculateSP);
+                // textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 200);
+
+                // Log.d(DEBUG_TAG, "Tex size pixel: " + px30);
+
+                // Log.d(DEBUG_TAG, "TextView: " + IdAsString + " " + width + " " + height);
+
+                textView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+
+            }
+        });
+
+
+    }
+
+    public class MyOnTouchListener implements View.OnTouchListener {
+
+        @Override
+        public boolean onTouch(View view, MotionEvent event) {
+
+            int action = MotionEventCompat.getActionMasked(event);
+
+            // Log.d(DEBUG_TAG, "FragmentSpeed onTouch");
+
+            return true;
 
             /*
 
@@ -451,7 +508,7 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
             }
 
             */
-            }
         }
-
     }
+
+}
