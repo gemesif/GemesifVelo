@@ -30,6 +30,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static com.product.gemesif.gemesifvelo.GemesifVeloGlobal.AppearanceColorButton;
+import static com.product.gemesif.gemesifvelo.GemesifVeloGlobal.adjust_textView_String;
 import static com.product.gemesif.gemesifvelo.GemesifVeloGlobal.colorDayNightInverse;
 
 public class FragmentSpeed extends Fragment implements View.OnClickListener, View.OnLongClickListener {
@@ -89,7 +90,7 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
         initColorTable();
         // scanningViewGroup(DayNightTheme.NIGHT_THEME, (ViewGroup) rootView);
         // setViewGroup(GemesifVeloGlobal.currentDayNightTheme, (ViewGroup) rootView);
-        scanningViewGroup(GemesifVeloGlobal.currentDayNightTheme, (ViewGroup) rootView); // AA
+        scanningViewGroup(GemesifVeloGlobal.currentDayNightTheme, (ViewGroup) rootView);
         // getColorbyName(GemesifVeloGlobal.themeColors);
         // list_colorDayNight();
 
@@ -125,8 +126,15 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
 
         rootView.findViewById(R.id.Button_v2h1_1);
 
+        String[] textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", "Button_v2h1_1"};
+
+        interface_adjustTextSize(textView_String);
+        interface_adjustTextSize(adjust_textView_String);
+
         adjustTextSize(Button_v2h1_1);
-        adjustTextSize((TextView) rootView.findViewById(R.id.Text_v2h2v1_1));
+        // adjustTextSize((TextView) rootView.findViewById(R.id.Text_v2h2v1_1));
+        // List<String> list = Arrays.asList("foo", "bar")
+        // 
 
         return rootView;
     }
@@ -426,9 +434,37 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
         }
     }
 
+
+    void interface_adjustTextSize(String[] string) {
+
+
+        for (String s : string) {
+
+            Log.d(DEBUG_TAG, "String: " + s);
+
+            int resID = getResources().getIdentifier(s, "id", getContext().getPackageName());
+            TextView  textView = (TextView) rootView.findViewById(resID);
+            adjustTextSize(textView);
+
+
+        }
+
+
+    }
+
+
     void adjustTextSize(final TextView textView) {
 
-        // Log.d(DEBUG_TAG, "adjustTextSize");
+        Log.d(DEBUG_TAG, "adjustTextSize");
+
+        final Button button2;
+        final Button button1;
+        button2 = (Button) rootView.findViewById(R.id.Button_v2h1_1);
+
+        int resID = getResources().getIdentifier("Button_v2h1_1", "id", getContext().getPackageName());
+
+        button1 = (Button) rootView.findViewById(resID);
+
 
         textView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
 
@@ -459,6 +495,9 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
                 calculateSP = height * pixel_to_sp;
 
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, calculateSP);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, calculateSP);
+                // button1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 200);
+
                 // textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 200);
 
                 // Log.d(DEBUG_TAG, "Tex size pixel: " + px30);
@@ -466,11 +505,8 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
                 // Log.d(DEBUG_TAG, "TextView: " + IdAsString + " " + width + " " + height);
 
                 textView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-
             }
         });
-
-
     }
 
     public class MyOnTouchListener implements View.OnTouchListener {
