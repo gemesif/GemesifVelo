@@ -25,6 +25,9 @@ import android.widget.TextView;
 import com.product.gemesif.gemesifvelo.GemesifVeloGlobal.DayNightTheme;
 import com.product.gemesif.gemesifvelo.GemesifVeloGlobal.AppearanceType;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -43,7 +46,7 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
     int cikl = 0;
     private String title;
     private int page;
-    private Runnable mTicker;
+    private Runnable mTicker, mTicker1;
 
     // newInstance constructor for creating fragment with arguments
     public static FragmentSpeed newInstance(int page, String title) {
@@ -120,18 +123,36 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
         };
         mTicker.run();
 
-        Button_v2h1_1 = (Button) rootView.findViewById(R.id.Button_v2h1_1);
-        Button_v2h1_1.setOnClickListener(this);
-        Button_v2h1_1.setOnLongClickListener(this);
+        final TextView dateField = (TextView) rootView.findViewById(R.id.datefield);
 
-        rootView.findViewById(R.id.Button_v2h1_1);
+        mTicker1 = new Runnable() {
+            @Override
+            public void run() {
+                Handler mHandler;
+                mHandler = new Handler();
+                long now = SystemClock.uptimeMillis();
+                long next = now + (1000L - now % 1000L);
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy MM dd - HH mm ss");
+                Date today = Calendar.getInstance().getTime();
+                String dateString = formatter.format(today);
+                dateField.setText(dateString);
+                mHandler.postAtTime(mTicker1, next);
+            }
+        };
+        mTicker1.run();
 
-        String[] textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", "Button_v2h1_1"};
+        // Button_v2h1_1 = (Button) rootView.findViewById(R.id.Button_v2h1_1);
+        // Button_v2h1_1.setOnClickListener(this);
+        // Button_v2h1_1.setOnLongClickListener(this);
 
-        interface_adjustTextSize(textView_String);
+        // rootView.findViewById(R.id.Button_v2h1_1);
+
+        // String[] textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", "Button_v2h1_1"};
+
+        // interface_adjustTextSize(textView_String);
         interface_adjustTextSize(adjust_textView_String);
 
-        adjustTextSize(Button_v2h1_1);
+        // adjustTextSize(Button_v2h1_1);
         // adjustTextSize((TextView) rootView.findViewById(R.id.Text_v2h2v1_1));
         // List<String> list = Arrays.asList("foo", "bar")
         // 
@@ -440,7 +461,7 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
 
         for (String s : string) {
 
-            Log.d(DEBUG_TAG, "String: " + s);
+            // Log.d(DEBUG_TAG, "String: " + s);
 
             int resID = getResources().getIdentifier(s, "id", getContext().getPackageName());
             TextView  textView = (TextView) rootView.findViewById(resID);
@@ -455,7 +476,7 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
 
     void adjustTextSize(final TextView textView) {
 
-        Log.d(DEBUG_TAG, "adjustTextSize");
+        // Log.d(DEBUG_TAG, "adjustTextSize");
 
         final Button button2;
         final Button button1;
