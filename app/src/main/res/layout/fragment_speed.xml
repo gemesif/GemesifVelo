@@ -195,7 +195,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_weight="70"
                 android:orientation="vertical">
-                void adjustTextView(TextView textView, DayNightTheme dayNightTheme, GemesifVeloGlobal.ThemeColors[] themeColors) {Button
+
                 <TextView
                     android:id="@+id/Text_v2h2v1_1"
                     style="@style/Speed1Font"
@@ -243,6 +243,13 @@
 
         </LinearLayout>
 
+
+
+
+
+
+
+
         <LinearLayout
             android:id="@+id/linearLayout_v2h3"
             android:layout_width="0dp"
@@ -252,7 +259,42 @@
 
         </LinearLayout>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_v3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textview_v3"
+            style="@style/SpeeddataFont"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_vertical"
+            android:text="@string/Speeddata" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout_Sep_v2_TAG_Sep"
@@ -297,7 +339,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout_Sep__v2_h2_TAG_Sep"
+            android:id="@+id/linearLayout_Sep_v2_h2_TAG_Sep"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="20"
@@ -336,8 +378,7 @@
                 android:layout_height="1dp"
                 android:background="@color/black"
                 android:orientation="vertical"
-                android:weightSum="100">
-            </LinearLayout>
+                android:weightSum="100"></LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout_Sep_v2_h3_v3_TAG_Sep"

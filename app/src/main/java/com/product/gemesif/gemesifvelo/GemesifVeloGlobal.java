@@ -19,7 +19,8 @@ public class GemesifVeloGlobal {
         NORMAL, BLACKBACKGROUNDSEP, SEP, NOTAG
     }
 
-    public static String[] adjust_textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", "Button_v2h1_1"};
+    // public static String[] adjust_textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", "text", "test", "datefield"};
+    public static String[] adjust_textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", };
 
     public static  ThemeColors AppearanceColorBackground(AppearanceType appearanceType) {
 
@@ -75,8 +76,8 @@ public class GemesifVeloGlobal {
 
 
 
-    // public static DayNightTheme currentDayNightTheme = DayNightTheme.DAY_THEME;
-    public static DayNightTheme currentDayNightTheme = DayNightTheme.NIGHT_THEME;
+    public static DayNightTheme currentDayNightTheme = DayNightTheme.DAY_THEME;
+    // public static DayNightTheme currentDayNightTheme = DayNightTheme.NIGHT_THEME;
 
     public static String themeColors[] = {"fontColor", "inverse_fontColor", "sepfontcolor", "inverse_sepfontcolor", "fontColor_darkbackground", "inverse_fontColor_darkbackground", "background", "inverse_background", "darkbackground", "inverse_darkbackground",
             "buttonbackground", "inverse_buttonbackground",
