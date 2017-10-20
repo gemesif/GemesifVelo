@@ -248,15 +248,42 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="100">
 
-        <TextView
-            android:id="@+id/textview_v3"
-            style="@style/SpeeddataFont"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/linearLayout_v3h1"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center_vertical|center_vertical"
-            android:text="@string/Speeddata" />
+            android:layout_weight="80"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textview_v3"
+                style="@style/SpeeddataFont"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_vertical"
+                android:text="@string/Speeddata" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_v3h2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/v3h2"
+                style="@style/SpeedDimFont"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|bottom"
+                android:text="@string/SpeeddataDIM" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
