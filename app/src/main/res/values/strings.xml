@@ -11,6 +11,7 @@
     <string name="SpeedDim">Sp\n(km/h)</string>
 
     <string name="Speeddata">12:20:33</string>
+    <string name="SpeeddataDIM">Hours</string>
 
     <string name="SpeedMessage">This is Speed fragment</string>
     <string name="Test">Test Text Field</string>
