@@ -463,10 +463,13 @@ public class FragmentSpeed extends Fragment implements View.OnClickListener, Vie
 
             // Log.d(DEBUG_TAG, "String: " + s);
 
-            int resID = getResources().getIdentifier(s, "id", getContext().getPackageName());
-            TextView  textView = (TextView) rootView.findViewById(resID);
-            adjustTextSize(textView);
+            if(s != null && s.length() != 0) {
 
+                int resID = getResources().getIdentifier(s, "id", getContext().getPackageName());
+                TextView textView = (TextView) rootView.findViewById(resID);
+                adjustTextSize(textView);
+
+            }
 
         }
 

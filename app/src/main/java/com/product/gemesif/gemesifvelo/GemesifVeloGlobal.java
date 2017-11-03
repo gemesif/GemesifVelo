@@ -19,8 +19,9 @@ public class GemesifVeloGlobal {
         NORMAL, BLACKBACKGROUNDSEP, SEP, NOTAG
     }
 
-    // public static String[] adjust_textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", "text", "test", "datefield"};
-    public static String[] adjust_textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", };
+    // public static String[] adjust_textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", "text", "test", "datefield", "textview_v3", "textview_v4", "textview_v5"};
+    // public static String[] adjust_textView_String = {"Button_v2h1_1", "Text_v2h2v1_1", };
+    public static String[] adjust_textView_String = {"" };
 
     public static  ThemeColors AppearanceColorBackground(AppearanceType appearanceType) {
 

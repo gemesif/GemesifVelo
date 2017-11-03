@@ -6,20 +6,20 @@
     <string name="datestring">2014 07 08 14:49 50</string>
     <string name="Sep">Speed</string>
     <string name="Sep1">Trip</string>
-    <string name="Sep2">Controll</string>
+    <string name="Sep2">Control</string>
 
     <string name="SpeedText">36</string>
     <string name="SpeedText1">3</string>
     <string name="SpeedDim">Sp\n(km/h)</string>
 
     <string name="Speeddata">12:20:33</string>
-    <string name="SpeeddataDIM">Hours</string>
+    <string name="SpeeddataDim">Hours</string>
 
     <string name="Speeddata1">12:20:33</string>
-    <string name="SpeeddataDIM1">Hours</string>
+    <string name="SpeeddataDim_1">Hours</string>
 
     <string name="Speeddata2">12:20:33</string>
-    <string name="SpeeddataDIM2">Hours</string>
+    <string name="SpeeddataDim_2">Hours</string>
 
     <string name="SpeedMessage">This is Speed fragment</string>
     <string name="Test">Test Text Field</string>
@@ -28,7 +28,3 @@
     <string name="drawer_close">Close navigation drawer</string>
 
 </resources>
-
-
-
-
